@@ -1,5 +1,5 @@
 # Calcium
-a (currently) polish notation calculator
+a (currently) reverse polish notation calculator
 
 ## Why?
 it seems like a project that is small enough to start, but has
