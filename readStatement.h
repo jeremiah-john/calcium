@@ -1,4 +1,5 @@
 #ifndef READSTATEMENT
 #define READSTATEMENT
-string readStatement(void);
+#include <string>
+std::string readStatement(void);
 #endif

@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
+#include "evaluation.h"
+#include "readStatement.h"
 int main(void)
 {
-	string expression; //this is the expression to evaluate;
+	std::string expression; //this is the expression to evaluate;
 	expression = readStatement();
 	int k = evaluateStatement(expression);
 	
