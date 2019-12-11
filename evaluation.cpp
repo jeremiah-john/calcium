@@ -4,5 +4,6 @@
 
 int evaluateStatement(std::string statement)
 {
-	return 0;
+    int16_t stack[100];
+    
 }
