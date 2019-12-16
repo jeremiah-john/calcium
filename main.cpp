@@ -6,8 +6,7 @@ int main(void)
 {
 	std::string expression; //this is the expression to evaluate;
 	expression = readStatement();
-	int k = evaluateStatement(expression);
+	evaluateStatement(expression);
 	
-        std::cout << k << std::endl;
 	return 0;
 }
