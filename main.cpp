@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "evaluation.h"
 #include "readStatement.h"
 int main(void)
