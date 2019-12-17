@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "readStatement.h"
 
 //Read in a statement and print it to a string

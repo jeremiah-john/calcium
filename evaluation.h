@@ -1,5 +1,8 @@
 #ifndef EVALHEADER
-#define EVALHEADER 
+#define EVALHEADER
+    #include <iostream>
+    #include <sstream>
     #include <string>
-    int evaluateStatement(std::string statement);
+    stringstream evaluateStatement(std::string statement);
+    int evalLoop(stringstream os);
 #endif

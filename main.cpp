@@ -6,7 +6,5 @@ int main(void)
 {
 	std::string expression; //this is the expression to evaluate;
 	expression = readStatement();
-	evaluateStatement(expression);
-	
-	return 0;
+	return evalLoop(evaluateStatement(expression));
 }
