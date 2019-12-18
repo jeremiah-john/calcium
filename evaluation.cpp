@@ -8,10 +8,11 @@ int evalLoop(std::stringstream os)
     {
 	std::string currentTerm;
 	os >> currentTerm;
-
+        if(currentTerm == "")
+		break;
 	if(currentTerm=="+")
 	{
-	    if(stackCount > 2) //see if there are enough operands in the stack in order to do the operation
+	    if(stackCount >= 2) //see if there are enough operands in the stack in order to do the operation
 	    {
                 stack[stackCount -2] = stack[stackCount-2] + stack[stackCount-1];
 		stack[stackCount-1] = 0;
@@ -26,7 +27,7 @@ int evalLoop(std::stringstream os)
 	}
 	else if(currentTerm=="-")
         {
-            if(stackCount > 2) //see if there are enough operands in the stack in order to do the operation
+            if(stackCount >= 2) //see if there are enough operands in the stack in order to do the operation
 	    {
                 stack[stackCount -2] = stack[stackCount-2] - stack[stackCount-1];
 		stack[stackCount-1] = 0;
@@ -43,7 +44,8 @@ int evalLoop(std::stringstream os)
 	{
             try
 	    {
-                stack[stackCount++] = std::stoi(currentTerm);	
+                stack[stackCount] = std::stoi(currentTerm);
+	        stackCount++;	
 	    }
 	    catch(std::invalid_argument)
 	    {
