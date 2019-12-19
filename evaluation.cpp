@@ -40,6 +40,37 @@ int evalLoop(std::stringstream os)
 		    return evalLoop(evaluateStatement(readStatement()));
 	    }
         }
+        else if(currentTerm=="/")
+        {
+            if(stackCount >= 2) //see if there are enough operands in the stack in order to do the operation
+	    {
+                stack[stackCount -2] = stack[stackCount-2] / stack[stackCount-1];
+		stack[stackCount-1] = 0;
+		stackCount -= 1;  
+		
+	    }
+	    else
+	    {
+		    std::cout << "Invalid Input: there were not enough operands for subtraction!" << std::endl;
+		    return evalLoop(evaluateStatement(readStatement()));
+	    }
+        }
+        else if(currentTerm=="*")
+        {
+            if(stackCount >= 2) //see if there are enough operands in the stack in order to do the operation
+	    {
+                stack[stackCount -2] = stack[stackCount-2] * stack[stackCount-1];
+		stack[stackCount-1] = 0;
+		stackCount -= 1;  
+		
+	    }
+	    else
+	    {
+		    std::cout << "Invalid Input: there were not enough operands for subtraction!" << std::endl;
+		    return evalLoop(evaluateStatement(readStatement()));
+	    }
+        }
+        
 	else
 	{
             try
